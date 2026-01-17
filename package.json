@@ -1,0 +1,27 @@
+{
+  "name": "qe-playwright-framework",
+  "version": "1.0.0",
+  "description": "This repository demonstrates a scalable Playwright-based UI automation framework designed for complex enterprise web applications, using Salesforce Lightning as the reference application.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayankmahajan0work/qe-playwright-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mayankmahajan0work/qe-playwright-framework/issues"
+  },
+  "homepage": "https://github.com/mayankmahajan0work/qe-playwright-framework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
