@@ -1,0 +1,18 @@
+As a Sales Representative,
+I want to convert a qualified lead into an account, contact, and opportunity,
+so that I can begin the sales process for a real customer.
+
+Acceptance Criteria:
+
+Scenario 1:Convert Lead
+Given a Lead is marked as "Qualified"
+When I convert the Lead
+Then a new Account should be created
+And a new Contact should be created
+And a new Opportunity should be created
+And the Lead should be marked as Converted
+
+Scenario 2:Verify converted records
+Given a Lead has been converted
+When I navigate to the Account record
+Then the Contact and Opportunity created from the Lead should be associated with the Account

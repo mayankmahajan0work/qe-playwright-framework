@@ -10,6 +10,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
     viewport: { width: 1280, height: 720 },
+    baseURL: 'https://computing-ability-8321.my.salesforce.com',
+    storageState: 'auth/auth_state.json',
   },
 
   reporter: [['html', { open: 'never' }]],

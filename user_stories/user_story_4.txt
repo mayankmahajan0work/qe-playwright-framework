@@ -1,0 +1,15 @@
+As a Support Agent,
+I want to create a case for an existing customer,
+so that customer issues can be tracked and resolved efficiently.
+
+Acceptance Criteria:
+
+Scenario 1: Create a Case
+Given an Account and Contact exist
+When I create a new Case with valid details
+Then the Case should be created successfully
+And a Case number should be generated
+
+Scenario 2: Validate relationships
+Given a Case is created
+Then the Case should be associated with the correct Account and Contact

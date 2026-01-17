@@ -1,0 +1,19 @@
+As a Sales Representative,
+I want to manage opportunities through different sales stages,
+so that I can track progress and close deals successfully.
+
+Acceptance Criteria:
+
+Scenario 1: Create Opportunity from Lead
+Given a Lead is converted
+Then an Opportunity should be created with stage "Prospecting"
+
+Scenario 2: Progress Opportunity stages
+Given an Opportunity exists
+When I update the Opportunity stage sequentially
+Then the stage and probability should update correctly
+
+Scenario 3: Close Opportunity
+Given an Opportunity is in Proposal stage
+When I update the stage to "Closed Won"
+Then the Opportunity should be marked as Closed Won

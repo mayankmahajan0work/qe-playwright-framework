@@ -1,0 +1,17 @@
+As a Sales Representative,
+I want to create and qualify leads in Salesforce,
+so that potential customers can be tracked and evaluated before conversion.
+
+
+Acceptance criteria:
+
+Scenario 1: Create a new Lead
+Given I am logged into Salesforce Lightning
+When I create a new Lead with valid mandatory details
+Then the Lead should be saved successfully
+And the Lead status should be "Open – Not Contacted"
+
+Scenario 2: Update Lead status
+Given a Lead exists in the system
+When I update the Lead status to "Qualified"
+Then the updated status should be saved successfully

@@ -1,0 +1,9 @@
+As a Product Owner,
+I want all customer records to remain correctly linked across Salesforce objects,
+so that sales and support teams have a unified customer view.
+
+Acceptance Criteria:
+
+Given a Lead has been converted and a Case has been created
+Then the Account should show related Contacts, Opportunities, and Cases
+And the data relationships should be consistent across all records
