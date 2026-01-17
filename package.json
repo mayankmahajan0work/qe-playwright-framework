@@ -7,7 +7,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "capture:page": "npx ts-node utils/capture-page.ts",
+    "save:auth": "node utils/save-auth.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +26,9 @@
   },
   "homepage": "https://github.com/mayankmahajan0work/qe-playwright-framework#readme",
   "devDependencies": {
-    "@playwright/test": "^1.57.0"
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

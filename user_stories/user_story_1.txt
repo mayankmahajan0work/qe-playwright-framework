@@ -9,7 +9,7 @@ Scenario 1: Create a new Lead
 Given I am logged into Salesforce Lightning
 When I create a new Lead with valid mandatory details
 Then the Lead should be saved successfully
-And the Lead status should be "Open – Not Contacted"
+And the Lead status should be "New"
 
 Scenario 2: Update Lead status
 Given a Lead exists in the system

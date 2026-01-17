@@ -43,7 +43,7 @@ async function saveAuth() {
     });
 
     console.log('💾 Saving authentication session...');
-    const storagePath = 'auth_state.json';
+    const storagePath = 'auth/auth_state.json';
     await context.storageState({ path: storagePath });
     console.log(`✅ Auth session saved to ${storagePath}`);
 
