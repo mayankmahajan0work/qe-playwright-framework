@@ -38,6 +38,5 @@ export class LeadFormPage {
         await this.companyInput().fill(company); // Fill Company as well
         await this.saveButton().click(); // Click Save    
         await expect(this.successToast()).toBeVisible(); // Verify success toast
-        await expect(this.leadStatusValue()).toHaveText(/New/i); // Verify Lead Status is 'New'        
     }
 }

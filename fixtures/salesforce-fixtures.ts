@@ -1,7 +1,14 @@
 import { test as base, Page } from '@playwright/test';
+import { createLead } from './helpers/leadHelpers';
+
+type LeadData = {
+  lastName: string;
+  company: string;
+};
 
 type SalesforceFixtures = {
   authenticatedPage: Page;
+  leadFixture: LeadData;
 };
 
 export const test = base.extend<SalesforceFixtures>({
@@ -16,6 +23,16 @@ export const test = base.extend<SalesforceFixtures>({
     await use(page);
     
     // Cleanup happens automatically after test
+  },
+
+  leadFixture: async ({ authenticatedPage }, use) => {
+    // Create a new lead using the helper function
+    const leadData = await createLead(authenticatedPage);
+    
+    // Provide lead data to the test
+    await use(leadData);
+    
+    // Cleanup: No cleanup needed for leads (they can remain in Salesforce)
   },
 });
 

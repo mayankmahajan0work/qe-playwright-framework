@@ -27,7 +27,8 @@ export class LeadListPage {
     async openLead(leadName: string) {
         await this.leadRowByName(leadName).click();
         await expect(
-            this.page.getByText(leadName, { exact: true })
+            //this.page.getByText(leadName, { exact: true })
+            this.page.locator('records-record-layout h1', { hasText: leadName })
         ).toBeVisible();
     }
 

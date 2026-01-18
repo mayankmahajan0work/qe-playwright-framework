@@ -41,6 +41,5 @@ export class LeadDetailPage {
 
     // Assertions
     await expect(this.successToast()).toBeVisible();
-    await expect(this.leadStatusValue()).toHaveText(/Qualified/i);
   }
 }

@@ -21,6 +21,9 @@ test.describe('Lead Creation', () => {
     const company = `TestCorp-${Date.now()}`;
 
     await leadForm.createLead(lastName, company);
-    // Assertions are already in the createLead() method
+    
+    // Assertions
+    await expect(leadForm.leadStatusValue()).toHaveText(/New/i); // Verify Lead Status is 'New'    
+
   });
 });
