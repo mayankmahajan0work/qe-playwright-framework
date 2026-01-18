@@ -10,8 +10,7 @@
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "test:ui": "npx playwright test --ui",
-    "capture:page": "npx ts-node utils/capture-page.ts",
-    "save:auth": "node utils/save-auth.js"
+    "capture:page": "npx ts-node utils/capture-page.ts",    "generate:page": "npx ts-node utils/generate-page-object.ts",    "save:auth": "node utils/save-auth.js"
   },
   "repository": {
     "type": "git",
