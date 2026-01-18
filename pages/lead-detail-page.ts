@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 
-export class LeadDetailsPage {
+export class LeadDetailPage {
   readonly page: Page;
 
   constructor(page: Page) {
@@ -25,12 +25,12 @@ export class LeadDetailsPage {
   }
 
   successToast(): Locator {
-    return this.page.getByRole('alert');
-  }
+        return this.page.getByText(/was saved/i);
+    }
 
   leadStatusValue(): Locator {
-    return this.page.getByRole('combobox', { name: 'Lead Status' });
-  }
+      return this.page.locator('lightning-formatted-text:has-text("Qualified")');
+    }
 
   // Action
   async updateLeadStatusToQualified() {

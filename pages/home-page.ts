@@ -9,7 +9,7 @@ export class HomePage {
 
   // Locators
   salesLink(): Locator {
-    return this.page.getByRole('link', { name: 'Sales', exact: true });
+    return this.page.getByRole('link', { name: 'Sales'});
   }
 
   accountsLink(): Locator {
@@ -28,7 +28,7 @@ export class HomePage {
   async navigateToSales() {
     await this.salesLink().click();
     await expect(
-      this.page.getByRole('heading', { name: 'Leads' })
+      this.page.getByRole('heading', { name: 'Leads Recently Viewed' })
     ).toBeVisible();
   }
 

@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
 
-export class LeadsListPage {
+export class LeadListPage {
   readonly page: Page;
 
   constructor(page: Page) {
@@ -12,11 +12,22 @@ export class LeadsListPage {
         return this.page.getByRole('button', { name: 'New', exact: true });
     }
 
+    leadRowByName(leadName: string): Locator {
+        return this.page.getByRole('link', { name: leadName});
+    }
+
     // Actions
     async clickNewLead() {
         await this.newLeadButton().click();
         await expect(
             this.page.getByRole('heading', { name: 'New Lead' })
+        ).toBeVisible();
+    }
+
+    async openLead(leadName: string) {
+        await this.leadRowByName(leadName).click();
+        await expect(
+            this.page.getByText(leadName, { exact: true })
         ).toBeVisible();
     }
 
